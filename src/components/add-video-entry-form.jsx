@@ -180,11 +180,11 @@ const AddVideoEntryForm = () => {
       return;
     }
 
-    if (currentTopic === ""){
-        setOpenType("error");
-        setOpenText("Please select the topic.");
-        setOpen(true);
-        return;
+    if (currentTopic === "") {
+      setOpenType("error");
+      setOpenText("Please select the topic.");
+      setOpen(true);
+      return;
     }
 
     if (!isUrlValid(url)) {
@@ -203,7 +203,7 @@ const AddVideoEntryForm = () => {
         url: url,
         time: time,
         description: description,
-        topic:currentTopic
+        topic: currentTopic,
       })
       .then(() => {
         setUrl("");
@@ -289,13 +289,6 @@ const AddVideoEntryForm = () => {
             >
               <MenuItem value="10 Minutes">10 Minutes</MenuItem>
               <MenuItem value="20 Minutes">20 Minutes</MenuItem>
-              <MenuItem value="30 Minutes">30 Minutes</MenuItem>
-              <MenuItem value="40 Minutes">40 Minutes</MenuItem>
-              <MenuItem value="50 Minutes">50 Minutes</MenuItem>
-              <MenuItem value="60 Minutes">60 Minutes</MenuItem>
-              <MenuItem value="70 Minutes">70 Minutes</MenuItem>
-              <MenuItem value="80 Minutes">80 Minutes</MenuItem>
-              <MenuItem value="90 Minutes">90 Minutes</MenuItem>
             </Select>
           </FormControl>
         </Grid>
@@ -324,8 +317,10 @@ const AddVideoEntryForm = () => {
               label="Exercise Category"
               // autoWidth
             >
-              {currentTopics.map((topic,index) => (
-                <MenuItem key = {index} value = {topic.description}>{topic.description}</MenuItem>
+              {currentTopics.map((topic, index) => (
+                <MenuItem key={index} value={topic.description}>
+                  {topic.description}
+                </MenuItem>
               ))}
             </Select>
           </FormControl>
