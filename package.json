@@ -1,42 +1,38 @@
 {
-  "name": "gymcall_admin",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@material-ui/core": "^4.10.2",
-    "@material-ui/icons": "^4.9.1",
-    "@material-ui/lab": "^4.0.0-alpha.56",
-    "@react-firebase/auth": "^0.2.10",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "firebase": "^7.15.1",
-    "mdbreact": "^4.27.0",
-    "node-sass": "^4.14.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1"
+  "name": "broxus-ton-atomic-swap-proposal",
+  "version": "1.0.0",
+  "description": "Set of smart contracts and additional tools for implementing atomic swaps between Ethereum, TON and Bitcoin",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "npm link src/common"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "keywords": [
+    "bitcoin",
+    "ethereum",
+    "ton"
+  ],
+  "author": "pavlovdog_ <pavlovdog.moscow@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bignumber.js": "^9.0.0",
+    "bip39": "^3.0.2",
+    "bitcoinjs-lib": "^5.1.6",
+    "btc-opcode": "0.0.1",
+    "crypto": "^1.0.1",
+    "dotenv": "^8.2.0",
+    "ganache-cli": "^6.10.2",
+    "js-sha256": "^0.9.0",
+    "minimist": "^1.2.0",
+    "mocha-logger": "^1.0.6",
+    "moment": "^2.28.0",
+    "ton-client-js": "^0.26.1",
+    "ton-client-node-js": "^0.26.1",
+    "truffle": "^5.1.44",
+    "truffle-hdwallet-provider": "^1.0.17",
+    "wait-console-input": "^0.1.7"
   }
 }
